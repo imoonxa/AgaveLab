@@ -1,0 +1,116 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1343\cocoasubrtf160
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fmodern\fcharset0 Courier;}
+{\colortbl;\red255\green255\blue255;\red38\green38\blue38;\red63\green105\blue30;\red85\green142\blue40;
+\red246\green246\blue246;\red52\green110\blue183;\red193\green193\blue193;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+\margl1440\margr1440\vieww23080\viewh14500\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f0\fs24 \cf2 I
+\b\fs60 Programming Challenge\
+\pard\pardeftab720\sl500\sa300
+
+\b0\fs30 \cf2 The first goal of this task is to solve the problem (Feel free to use google!) and standard libraries (e.g. collection classes). Once you have a solution, think about and have a stab at trying to solve it efficiently (imagine that the class will be used with millions or billions of elements)\
+After finishing the problem, answer: \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl500
+\ls1\ilvl0
+\b \cf2 1) 
+\b0   What is the worst case complexity of your 
+\i insert
+\i0 :\
+\pard\tx720\pardeftab720\sl500
+\cf2                a)  
+\b O(1) 
+\b0       \cf3   \cf4 \ul \ulc4 b)  
+\b O(log n)
+\b0 \cf3 \ulnone  \cf2           c)   
+\b O(n)
+\b0         d)  
+\b Something Else: ____\
+\pard\tx720\pardeftab720\sl500
+
+\b0 \cf2         What is the worst case complexity of your 
+\i remove
+\i0 :\
+               a)   
+\b O(1)
+\b0         \cf4 \ul b)   
+\b O(log n) 
+\b0 \cf2 \ulnone           c)  
+\b O(n)
+\b0         d)   
+\b Something Else: ____
+\b0 \
+	What is the worst case complexity of your 
+\i removeLargest
+\i0 :\
+	      a)  
+\b O(1)
+\b0           \cf4 \ul b) 
+\b O(log n)\cf2 \ulnone  
+\b0             c)  
+\b O(n)
+\b0          d)   
+\b Something Else: ____
+\b0 \
+\
+  
+\b 2)
+\b0    Imagine a perfect solution to the problem.  Which option on Question One would be optimal?  yeWhat do you think the best possible solution would have answered question 1 ? \cf4 \ul a shorten function, less lines and no auxiliar vars.\cf2 \ulnone \
+  
+\b 3)
+\b0   If you had a week to work on your code, what would you do?  \cf4 \ul validations and settings functions maybe; there really is not much to add.\cf2 \ulnone \
+\
+\pard\pardeftab720\sl1020\sa300
+
+\b\fs60 \cf2 The Problem:\
+\pard\pardeftab720\sl500\sa300
+
+\b0\fs30 \cf2 Write a collection for storing elements (integers is fine, but what ever you like). You can assume the class is used correctly, and don't need to worry about things like error handling.\
+There are three operations this class needs to support:\
+\pard\pardeftab720\sl500\sa300
+
+\b\fs48 \cf2 insert(element)\
+\pard\pardeftab720\sl500\sa300
+
+\b0\fs30 \cf2 The method 
+\f1\fs24 \cb5 insert
+\f0\fs30 \cb1  takes an element, and puts it into the collection. The return type of insert is an 
+\f1\fs24 \cb5 identifier
+\f0\fs30 \cb1  for the element, which can be used for removing that particular element.\
+The returned 
+\f1\fs24 \cb5 identifier
+\f0\fs30 \cb1  is an opaque data-structure, and can be anything you like (e.g. number, address, string etc.)\
+Note: duplicate values may be inserted. Note 2: the identifier should not be invalidated by subsequent operations (other than removing itself)
+\b\fs48 \cf6 \
+\pard\pardeftab720\sl800\sa300
+\cf2 remove(identifier)\
+\pard\pardeftab720\sl500\sa300
+
+\b0\fs30 \cf2 The 
+\f1\fs24 \cb5 remove
+\f0\fs30 \cb1  method takes an 
+\f1\fs24 \cb5 identifier
+\f0\fs30 \cb1  (returned from an earlier insert) and removes that item from the collection. This method should return the value of the element removed.
+\b\fs48 \cf6 \
+\pard\pardeftab720\sl800\sa300
+\cf2 removeLargest()\
+\pard\pardeftab720\sl500\sa300
+
+\b0\fs30 \cf2 This method finds the largest element in the collection (using the simple builtin comparison), removes it from the collection, and returns its value.\
+If two values are the tied for largest, either one of them may be removed.\cf7 \
+\cf2 Example usage:\
+\pard\pardeftab720\sl380
+
+\f1\fs24 \cf2 \cb5 Collection col = new Collection();\
+Identifier a = col.insert(40);  // Identifier doesn't need to be explicit type (it could be an `int` if you like)\
+Identifier b = col.insert(25);\
+Identifier c = col.insert(30); \
+col.remove(C); // returns 30\
+col.removeLargest(); // returns 40\
+col.insert(50); // returns an identifier\
+col.removeLargest(); // returns 50\
+col.removeLargest(); // returns 25
+\fs26 \
+}
